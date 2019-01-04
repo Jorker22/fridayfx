@@ -16,8 +16,8 @@ Route::get('/', function () {
 
 });
 
-Route::get('/admin', function () {
-    return view('admin');
+Route::get('/facebook', function () {
+    return view('facebook');
 });
 
 
@@ -33,4 +33,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/edit/{id}',['as' => 'edit', 'uses' => 'HomeController@edit']); 
 Route::get('/update/{id}',['as' => 'update', 'uses' => 'HomeController@update']); 
+Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+Route::get('/callback', 'SocialAuthFacebookController@callback');
 //Route::get('attendance/{id}', ['as' => 'user.attendance', 'uses' => 'UserController@attendance']);

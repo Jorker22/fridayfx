@@ -29,7 +29,11 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
-
+    'facebook' => [
+        'client_id' => '349331235893042',
+        'client_secret' => '8f7c1b316759d50e590c58618bc709bc',
+        'redirect' => 'http://fridayfx.net/',
+    ],
     'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
